@@ -36,3 +36,9 @@ class AnalyzeUsersVK(object):
             if "career" in i.keys() and  len(i["career"]) != 0:
                 users.append(i)
         return users
+
+    def getUsersCurrentPosition(self, usersInfo):
+        positions = []
+        for i in usersInfo:
+            positions.append(i["career"][len(i["career"]) - 1])
+        return positions
